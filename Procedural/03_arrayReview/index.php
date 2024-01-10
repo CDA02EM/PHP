@@ -84,7 +84,7 @@ foreach($user as $field => $userInfo) {
 foreach($nameList as &$name) {
     // ucfirst() mes le premier caractère en majuscule.
     // https://www.php.net/manual/fr/function.ucfirst
-    ucfirst($name);
+    $name = ucfirst($name);
 }
 
 /* 
