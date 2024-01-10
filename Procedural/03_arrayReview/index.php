@@ -109,14 +109,14 @@ En PHP il y a beaucoup de fonction native (pas moins de 9000...), ici je vous en
 // Empile un element dans un tableau; Équivalent à $shoppingList[] = 'Mayonnaise';
 array_push($shoppingList, 'Mayonnaise');
 
-// Enfile un element au début d'un tableau
-array_shift($shoppingList, 'Macaron');
+// Enfile un/des element(s) au début d'un tableau
+array_unshift($shoppingList, 'Macaron', 'Meuringue');
 
-// dépile un element et le returne
+// dépile un element à la fin et le returne
 array_pop($shoppingList);
 
 // dépile un element au début en le retourne
-array_unshift($shoppingList);
+array_shift($shoppingList);
 
 // Les fonctions de trie
 // https://www.php.net/manual/fr/array.sorting.php
