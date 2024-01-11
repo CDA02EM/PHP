@@ -26,6 +26,16 @@ function encryptMessage(array $encryptionTable, string $keyword, string $secretM
     $secretMessage = strtoupper(str_replace(' ', '', $secretMessage));
 
     // Génère le chiffre intermédiaire en utilisant le carré de Polybe
+    $intermediateCipher = '';
+    foreach(str_split($secretMessage) as $char) {
+        foreach($encryptionTable as $symbolRow => $symbolRowValues) {
+            $symbolColumn = array_search($char, $symbolRowValues);
+            if($symbolColumn !== false) {
+                $intermediateCipher .= $symbolRow . $symbolColumn;
+                break;
+            }
+        }
+    }
     
     // Génère le chiffre final en utilisant le mot-clé
 }
